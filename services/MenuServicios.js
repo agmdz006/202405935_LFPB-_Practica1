@@ -1,11 +1,6 @@
 import readline from "readline"
 import { LeerArchivo } from "./DocumentoServicios.js"
-import {
-  exportarHistorialHTML,
-  exportarOperadoresHTML,
-  exportarClientesHTML,
-  exportarRendimientoHTML,
-  mostrarPorcentajeClasificacion,
+import {exportarHistorialHTML,exportarOperadoresHTML,exportarClientesHTML,exportarRendimientoHTML,mostrarPorcentajeClasificacion,
   mostrarCantidadPorCalificacion,
 } from "./ReporteServicios.js"
 
@@ -37,7 +32,7 @@ export function startMenu() {
         rl.question("Ingrese la ruta del archivo (TXT o CSV): ", (filePath) => {
           if (!filePath.trim()) {
             filePath = "./data/llamadas.txt" // Default file
-            console.log("📁 Usando archivo por defecto: ./data/llamadas.txt")
+            console.log(" Usando archivo por defecto: ./data/llamadas.txt")
           }
 
           // Validate file extension
@@ -45,7 +40,7 @@ export function startMenu() {
           const fileExtension = filePath.toLowerCase().substring(filePath.lastIndexOf("."))
 
           if (!validExtensions.includes(fileExtension)) {
-            console.log("❌ Formato de archivo no válido. Use archivos .txt o .csv")
+            console.log(" Formato de archivo no válido. Use archivos .txt o .csv")
             showMenu()
             return
           }
@@ -58,45 +53,45 @@ export function startMenu() {
             showMenu()
           })
         })
-        return // Don't call showMenu() immediately
+        return 
       case "2":
         if (records.length === 0) {
-          console.log("⚠ Primero debe cargar los registros de llamadas")
+          console.log(" Primero debe cargar los registros de llamadas")
         } else {
           exportarHistorialHTML(records)
         }
         break
       case "3":
         if (records.length === 0) {
-          console.log("⚠ Primero debe cargar los registros de llamadas")
+          console.log(" Primero debe cargar los registros de llamadas")
         } else {
           exportarOperadoresHTML(records)
         }
         break
       case "4":
         if (records.length === 0) {
-          console.log("⚠ Primero debe cargar los registros de llamadas")
+          console.log(" Primero debe cargar los registros de llamadas")
         } else {
           exportarClientesHTML(records)
         }
         break
       case "5":
         if (records.length === 0) {
-          console.log("⚠ Primero debe cargar los registros de llamadas")
+          console.log(" Primero debe cargar los registros de llamadas")
         } else {
           exportarRendimientoHTML(records)
         }
         break
       case "6":
         if (records.length === 0) {
-          console.log("⚠ Primero debe cargar los registros de llamadas")
+          console.log(" Primero debe cargar los registros de llamadas")
         } else {
           mostrarPorcentajeClasificacion(records)
         }
         break
       case "7":
         if (records.length === 0) {
-          console.log("⚠ Primero debe cargar los registros de llamadas")
+          console.log("Primero debe cargar los registros de llamadas")
         } else {
           mostrarCantidadPorCalificacion(records)
         }
@@ -106,7 +101,7 @@ export function startMenu() {
         rl.close()
         return
       default:
-        console.log("❌ Opción no válida. Intente de nuevo.")
+        console.log(" Opción no válida. Intente de nuevo.")
     }
     showMenu()
   }

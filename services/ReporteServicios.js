@@ -269,7 +269,7 @@ export function mostrarPorcentajeClasificacion(records) {
   console.log(`🟢 Llamadas Buenas (4-5 estrellas): ${buenas} (${porcentajeBuenas}%)`)
   console.log(`🟡 Llamadas Medias (2-3 estrellas): ${medias} (${porcentajeMedias}%)`)
   console.log(`🔴 Llamadas Malas (0-1 estrellas): ${malas} (${porcentajeMalas}%)`)
-  console.log(`📊 Total de llamadas: ${total}`)
+  console.log(` Total de llamadas: ${total}`)
 }
 
 export function mostrarCantidadPorCalificacion(records) {
@@ -288,5 +288,5 @@ export function mostrarCantidadPorCalificacion(records) {
   console.log(`⭐⭐⭐ 3 estrellas: ${calificaciones[3]} llamadas`)
   console.log(`⭐⭐⭐⭐ 4 estrellas: ${calificaciones[4]} llamadas`)
   console.log(`⭐⭐⭐⭐⭐ 5 estrellas: ${calificaciones[5]} llamadas`)
-  console.log(`📊 Total: ${records.length} llamadas`)
+  console.log(` Total: ${records.length} llamadas`)
 }
