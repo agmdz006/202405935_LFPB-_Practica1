@@ -1,0 +1,17 @@
+{
+  "name": "practica1_javascript_lfp",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["call-center", "simulator", "javascript", "lfp"],
+  "author": "",
+  "license": "ISC",
+  "description": "Simulador de Call Center - Práctica de Lenguajes Formales y de Programación",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
